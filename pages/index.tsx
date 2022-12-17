@@ -17,6 +17,11 @@ const CategoriesWithNoSSR = dynamic(() => import('@warmhold:components/categorie
     suspense: true,
 })
 
+const ProductsWithNoSSR = dynamic(() => import('@warmhold:components/product/products'), {
+    ssr: false,
+    suspense: true,
+})
+
 export default function Home() {
     return (
         <Main title={'Warmhold X'}>
@@ -28,7 +33,9 @@ export default function Home() {
                 <CategoriesWithNoSSR/>
             </Suspense>
 
-            <div style={{height: '1000px'}}/>
+            <Suspense fallback={`Loading...`}>
+                <ProductsWithNoSSR/>
+            </Suspense>
 
             <Suspense fallback={`Loading...`}>
                 <MarketsWithNoSSR/>

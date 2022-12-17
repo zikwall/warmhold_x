@@ -58,7 +58,7 @@ const Main = ({children, title}: MainProps) => {
             <script src="/js/vendor/bootstrap.min.js" defer />
             <script src="/js/plugins/glightbox.min.js"/>
 
-            <script src="/js/script.js"></script>
+            <script src="/js/script.js"/>
         </>
     )
 };

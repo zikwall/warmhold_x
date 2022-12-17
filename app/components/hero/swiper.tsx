@@ -4,7 +4,6 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 
 import Image from "next/image";
 import React from "react";
-import {width} from "dom7";
 
 interface SliderImageProps {
     url: string;
@@ -51,8 +50,6 @@ export default () => {
                         navigation={{nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev"}}
                         pagination={{el: ".swiper-pagination", clickable: !0}}
                         slidesPerView={1}
-                        onSlideChange={() => console.log('slide change')}
-                        onSwiper={(swiper) => console.log(swiper)}
                     >
                         <SwiperSlide>
                             <Slide image={{width: 800, height: 800, url: '/images/KD.png'}}>

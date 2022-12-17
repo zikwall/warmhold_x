@@ -129,6 +129,7 @@ export default function () {
                             <div className="footer__logo">
                                 <a className="footer__logo--link" href="/">
                                     <Image
+                                        loading="lazy"
                                         width={178}
                                         height={50}
                                         className="main__logo--img" src="/WARMHOLD_BLACK.png" alt="logo-img"
