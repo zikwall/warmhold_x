@@ -1,6 +1,6 @@
 FROM node:alpine
 
-ENV PORT ${PORT:-3002}
+ENV PORT ${PORT:-3006}
 RUN apk update && apk add bash
 RUN mkdir -p /usr/src/app && chown -R node:node /usr/src/app
 WORKDIR /usr/src/app
