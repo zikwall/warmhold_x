@@ -56,7 +56,6 @@ const Main = ({children, title}: MainProps) => {
             <Footer />
 
             <script src="/js/vendor/bootstrap.min.js" defer />
-            <script src="/js/plugins/swiper-bundle.min.js"/>
             <script src="/js/plugins/glightbox.min.js"/>
 
             <script src="/js/script.js"></script>

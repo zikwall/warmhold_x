@@ -143,9 +143,6 @@ export default function () {
                                 <a className="copyright__content--link" target="_blank"
                                       href="https://warmhold.ru"> Warmhold</a>.  Все права защищены
                             </p>
-                            <div className="footer__payment">
-                                <img src="/img/icon/payment-img.webp" alt="payment-img"/>
-                            </div>
                         </div>
                     </div>
                 </div>

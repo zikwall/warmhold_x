@@ -1,5 +1,6 @@
 import Image from "next/image";
 import {SubHeader} from "@warmhold:components/header/head";
+import React from "react";
 
 type Item = {
     title: string;
@@ -102,6 +103,30 @@ function buildMenu() {
     })
 }
 
+interface MegaMenuBannerProps {
+    children: React.ReactNode;
+    imageUrl: string;
+    actionUrl: string;
+}
+
+function MegaMenuBanner({ imageUrl, actionUrl, children }: MegaMenuBannerProps) {
+    return (
+        <a className="header__mega--menu__banner display-block"
+           href={actionUrl}>
+            <Image
+                width={555}
+                height={195}
+                className="header__mega--menu__banner--img"
+                src={imageUrl}
+                alt="banner-menu"
+            />
+            <div className="banner__content">
+                {children}
+            </div>
+        </a>
+    );
+}
+
 function MainItems() {
     return (
         <ul className="header__menu--wrapper d-flex">
@@ -124,115 +149,124 @@ function MainItems() {
                 <ul className="header__mega--menu d-flex">
                     <li className="header__mega--menu__li">
                         <ul className="header__mega--sub__menu">
-                            <li className="header__mega--sub__menu_li"><a
-                                className="header__mega--sub__menu--title" href="shop.html">Shop
-                                Left Sidebar</a></li>
-                            <li className="header__mega--sub__menu_li"><a
-                                className="header__mega--sub__menu--title"
-                                href="shop-right-sidebar.html">Shop Right Sidebar</a></li>
-                            <li className="header__mega--sub__menu_li"><a
-                                className="header__mega--sub__menu--title"
-                                href="shop-grid.html">Shop Grid</a></li>
-                            <li className="header__mega--sub__menu_li"><a
-                                className="header__mega--sub__menu--title"
-                                href="shop-grid-list.html">Shop Grid List</a></li>
-                            <li className="header__mega--sub__menu_li"><a
-                                className="header__mega--sub__menu--title"
-                                href="shop-list.html">Shop List</a></li>
+                            <li className="header__mega--sub__menu_li">
+                                <b>Контроллеры давления и системы от протечки</b>
+                            </li>
+                            <br />
+                            <li className="header__mega--sub__menu_li">
+                                <a className="header__mega--sub__menu--title" href="/">
+                                    Насосы для дачи
+                                </a>
+                            </li>
+                            <li className="header__mega--sub__menu_li">
+                                <a className="header__mega--sub__menu--title" href="/">
+                                    Системы защиты от протечек (Neptun)
+                                </a>
+                            </li>
+                            <li className="header__mega--sub__menu_li">
+                                <a className="header__mega--sub__menu--title" href="/">
+                                    Системы защиты от протечек (Spyheat)
+                                </a>
+                            </li>
                         </ul>
                     </li>
                     <li className="header__mega--menu__li">
                         <ul className="header__mega--sub__menu">
-                            <li className="header__mega--sub__menu_li"><a
-                                className="header__mega--sub__menu--title"
-                                href="product-details.html">Product Details</a></li>
-                            <li className="header__mega--sub__menu_li"><a
-                                className="header__mega--sub__menu--title"
-                                href="product-video.html">Video Product</a></li>
-                            <li className="header__mega--sub__menu_li"><a
-                                className="header__mega--sub__menu--title"
-                                href="product-details.html">Variable Product</a></li>
-                            <li className="header__mega--sub__menu_li"><a
-                                className="header__mega--sub__menu--title"
-                                href="product-left-sidebar.html">Product Left Sidebar</a></li>
-                            <li className="header__mega--sub__menu_li"><a
-                                className="header__mega--sub__menu--title"
-                                href="product-gallery.html">Product Gallery</a></li>
+                            <li className="header__mega--sub__menu_li">
+                                <b>Греющие кабели</b>
+                            </li>
+                            <br />
+                            <li className="header__mega--sub__menu_li">
+                                <a className="header__mega--sub__menu--title" href="/">
+                                     Для кровли кровля
+                                </a>
+                            </li>
+                            <li className="header__mega--sub__menu_li">
+                                <a className="header__mega--sub__menu--title" href="/">
+                                     Для водопровода
+                                </a>
+                            </li>
+                            <li className="header__mega--sub__menu_li">
+                                <a className="header__mega--sub__menu--title" href="/">
+                                     Для водостока
+                                </a>
+                            </li>
+                            <li className="header__mega--sub__menu_li">
+                                <a className="header__mega--sub__menu--title" href="/">
+                                     Для открытой площадки
+                                </a>
+                            </li>
+                            <li className="header__mega--sub__menu_li">
+                                <a className="header__mega--sub__menu--title" href="/">
+                                     для трубопровода
+                                </a>
+                            </li>
                         </ul>
                     </li>
                     <li className="header__mega--menu__li">
                         <ul className="header__mega--sub__menu">
-                            <li className="header__mega--sub__menu_li"><a
-                                className="header__mega--sub__menu--title"
-                                href="my-account.html">My Account</a></li>
-                            <li className="header__mega--sub__menu_li"><a
-                                className="header__mega--sub__menu--title"
-                                href="my-account-2.html">My Account 2</a></li>
-                            <li className="header__mega--sub__menu_li"><a
-                                className="header__mega--sub__menu--title" href="404.html">404
-                                Page</a></li>
-                            <li className="header__mega--sub__menu_li"><a
-                                className="header__mega--sub__menu--title" href="login.html">Login
-                                Page</a></li>
-                            <li className="header__mega--sub__menu_li"><a
-                                className="header__mega--sub__menu--title" href="faq.html">Faq
-                                Page</a></li>
+                            <li className="header__mega--sub__menu_li">
+                                <b>Теплые полы</b>
+                            </li>
+                            <br />
+                            <li className="header__mega--sub__menu_li">
+                                <a className="header__mega--sub__menu--title" href="/">
+                                    Электрический теплый пол
+                                </a>
+                            </li>
+                            <li className="header__mega--sub__menu_li">
+                                <a className="header__mega--sub__menu--title" href="/">
+                                    Дополнительный комплект монтажа теплого пола
+                                </a>
+                            </li>
                         </ul>
                     </li>
                     <li className="header__mega--menu__li">
                         <ul className="header__mega--sub__menu">
-                            <li className="header__mega--sub__menu_li"><a
-                                className="header__mega--sub__menu--title" href="about.html">About
-                                Us</a></li>
-                            <li className="header__mega--sub__menu_li"><a
-                                className="header__mega--sub__menu--title" href="contact.html">Contact
-                                Us</a></li>
-                            <li className="header__mega--sub__menu_li"><a
-                                className="header__mega--sub__menu--title"
-                                href="portfolio.html">Portfolio</a></li>
-                            <li className="header__mega--sub__menu_li"><a
-                                className="header__mega--sub__menu--title"
-                                href="compare.html">Compare</a></li>
-                            <li className="header__mega--sub__menu_li"><a
-                                className="header__mega--sub__menu--title"
-                                href="checkout.html">Checkout</a></li>
+                            <li className="header__mega--sub__menu_li">
+                                <b>Регуляторы</b>
+                            </li>
+                            <br />
+                            <li className="header__mega--sub__menu_li">
+                                <a className="header__mega--sub__menu--title" href="/">
+                                    Для теплого пола
+                                </a>
+                            </li>
+                            <li className="header__mega--sub__menu_li">
+                                <a className="header__mega--sub__menu--title" href="/">
+                                    Для инфракрасного отопления
+                                </a>
+                            </li>
+                            <li className="header__mega--sub__menu_li">
+                                <a className="header__mega--sub__menu--title" href="/">
+                                    Для радиаторного отопления
+                                </a>
+                            </li>
+                            <li className="header__mega--sub__menu_li">
+                                <a className="header__mega--sub__menu--title" href="/">
+                                    Для систем антиобледенения
+                                </a>
+                            </li>
                         </ul>
                     </li>
                     <li className="header__mega--menu__li fullscreen__style d-flex">
-                        <a className="header__mega--menu__banner display-block"
-                           href="shop.html">
-                            <Image
-                                width={555}
-                                height={195}
-                                className="header__mega--menu__banner--img"
-                                src="/img/banner/banner1.webp"
-                                alt="banner-menu"
-                            />
+                        <MegaMenuBanner imageUrl={'/img/banner/banner1.webp'} actionUrl={'/shop?id=1'}>
                             <div className="banner__content">
-                                                        <span
-                                                            className="banner__content--subtitle text__secondary mb-10">20% скидка</span>
+                                <span className="banner__content--subtitle text__secondary mb-10">20% скидка</span>
                                 <h2 className="banner__content--title"><span
                                     className="banner__content--title__inner">Новая</span> ПОСТАВКА
                                 </h2>
                                 <span className="banner__content--price">₽15.000</span>
                             </div>
-                        </a>
-                        <a className="header__mega--menu__banner display-block"
-                           href="shop.html">
-                            <Image
-                                width={555}
-                                height={195}
-                                className="header__mega--menu__banner--img"
-                                src="/img/banner/banner2.webp"
-                                alt="banner-menu"
-                            />
+                        </MegaMenuBanner>
+                        <MegaMenuBanner imageUrl={'/img/banner/banner2.webp'} actionUrl={'/shop?id=2'}>
                             <div className="banner__content right">
                                 <span className="banner__badge--style2">20%</span>
                                 <h2 className="banner__content--title"><span
                                     className="banner__content--title__inner"> НА </span> ВСЕ <br/> ТОВАРЫ
                                 </h2>
                             </div>
-                        </a>
+                        </MegaMenuBanner>
                     </li>
                 </ul>
             </li>

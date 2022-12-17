@@ -77,16 +77,24 @@ export function SubHeader() {
                                     categories={
                                         [
                                             {
-                                                title: 'Контроллеры давления', link: '',
+                                                title: 'Контроллеры давления',
+                                                link: 'https://market.yandex.ru/catalog--bloki-avtomatiki-dlia-nasosov/18060429/list?hid=15774676&lr=29393&track=peaces&businessId=2975152',
                                             },
                                             {
-                                                title: 'Системы защиты от протечек', link: '',
+                                                title: 'Системы защиты от протечек',
+                                                link: 'https://market.yandex.ru/catalog--sistemy-zashchity-ot-protechek-vody/18062602/list?hid=2134459&lr=29393&track=peaces&businessId=2975152',
                                             },
                                             {
-                                                title: 'Греющие кабели', link: '',
+                                                title: 'Греющие кабели',
+                                                link: 'https://market.yandex.ru/catalog--greiushchii-kabel-i-komplektuiushchie/18060569/list?businessId=2975152&hid=13106890&allowCollapsing=1&local-offers-first=0',
                                             },
                                             {
-                                                title: 'Теплые полы', link: '',
+                                                title: 'Теплые полы',
+                                                link: 'https://market.yandex.ru/catalog--elektricheskii-teplyi-pol/18060567/list?hid=658844&lr=29393&track=peaces&businessId=2975152',
+                                            },
+                                            {
+                                                title: 'Трморегуляторы/Термостаты',
+                                                link: 'https://market.yandex.ru/catalog--termoreguliatory-dlia-teplogo-pola-i-sistem-otopleniia/18060568/list?businessId=2975152&hid=15618842&allowCollapsing=1&local-offers-first=0',
                                             },
                                         ]
                                     }
@@ -99,16 +107,24 @@ export function SubHeader() {
                                     categories={
                                         [
                                             {
-                                                title: 'Контроллеры давления', link: '',
+                                                title: 'Контроллеры давления',
+                                                link: 'https://www.wildberries.ru/seller/309102/kontrollery-dlya-nasosov',
                                             },
                                             {
-                                                title: 'Системы защиты от протечек', link: '',
+                                                title: 'Системы защиты от протечек',
+                                                link: 'https://www.wildberries.ru/seller/309102/datchiki-protechki-vody',
                                             },
                                             {
-                                                title: 'Греющие кабели', link: '',
+                                                title: 'Греющие кабели',
+                                                link: 'https://www.wildberries.ru/seller/309102/kabeli-greyushchie',
                                             },
                                             {
-                                                title: 'Теплые полы', link: '',
+                                                title: 'Теплые полы',
+                                                link: 'https://www.wildberries.ru/seller/309102/teplye-poly',
+                                            },
+                                            {
+                                                title: 'Трморегуляторы/Термостаты',
+                                                link: 'https://www.wildberries.ru/seller/309102/termoregulyatory',
                                             },
                                         ]
                                     }

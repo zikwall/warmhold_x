@@ -1,31 +1,38 @@
-import Image from "next/image";
-import { Main } from "@warmhold:layouts";
+import dynamic from 'next/dynamic';
+import { Suspense } from 'react'
+import {Main} from "@warmhold:layouts";
+
+const HeroWithNoSSR = dynamic(() => import('@warmhold:components/hero/swiper'), {
+    ssr: false,
+    suspense: true,
+})
+
+const MarketsWithNoSSR = dynamic(() => import('@warmhold:components/markets'), {
+    ssr: false,
+    suspense: true,
+})
+
+const CategoriesWithNoSSR = dynamic(() => import('@warmhold:components/categories'), {
+    ssr: false,
+    suspense: true,
+})
 
 export default function Home() {
     return (
         <Main title={'Warmhold X'}>
+            <Suspense fallback={`Loading...`}>
+                <HeroWithNoSSR/>
+            </Suspense>
+
+            <Suspense fallback={`Loading...`}>
+                <CategoriesWithNoSSR/>
+            </Suspense>
+
             <div style={{height: '1000px'}}/>
-            <div className="brand__section section--padding pt-0">
-                <div className="container">
-                    <div className="brand__section--inner d-flex justify-content-between align-items-center">
-                        <div className="brang__logo--items">
-                            <Image width={145} height={38} className="brang__logo--img" src="/img/logo/brand-logo1.webp" alt="brand-logo"/>
-                        </div>
-                        <div className="brang__logo--items">
-                            <Image width={145} height={38} className="brang__logo--img" src="/img/logo/brand-logo2.webp" alt="brand-logo"/>
-                        </div>
-                        <div className="brang__logo--items">
-                            <Image width={145} height={38} className="brang__logo--img" src="/img/logo/brand-logo3.webp" alt="brand-logo"/>
-                        </div>
-                        <div className="brang__logo--items">
-                            <Image width={145} height={38} className="brang__logo--img" src="/img/logo/brand-logo4.webp" alt="brand-logo"/>
-                        </div>
-                        <div className="brang__logo--items">
-                            <Image width={145} height={38} className="brang__logo--img" src="/img/logo/brand-logo5.webp" alt="brand-logo"/>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+            <Suspense fallback={`Loading...`}>
+                <MarketsWithNoSSR/>
+            </Suspense>
         </Main>
     )
 }

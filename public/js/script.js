@@ -43,16 +43,12 @@ function TopOffset(el) {
 const headerStickyWrapper = document.querySelector("header"),
     headerStickyTarget = document.querySelector(".header__sticky");
 
-console.log(headerStickyTarget)
-
 if (headerStickyTarget) {
     let headerHeight = headerStickyWrapper.clientHeight;
     window.addEventListener("scroll", function () {
         let StickyTargetElement,
             TargetElementTopOffset = TopOffset(headerStickyWrapper).top;
         window.scrollY > TargetElementTopOffset ? headerStickyTarget.classList.add("sticky") : headerStickyTarget.classList.remove("sticky");
-
-        console.log("sticky")
     });
 }
 const scrollTop = document.getElementById("scroll__top");
@@ -63,94 +59,7 @@ scrollTop &&
     window.addEventListener("scroll", function () {
         window.scrollY > 300 ? scrollTop.classList.add("active") : scrollTop.classList.remove("active");
     }));
-var swiper = new Swiper(".hero__slider--activation", {
-        slidesPerView: 1,
-        loop: !0,
-        clickable: !0,
-        speed: 500,
-        spaceBetween: 30,
-        navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-        pagination: { el: ".swiper-pagination", clickable: !0 },
-    }),
-    swiper = new Swiper(".product__swiper--activation", {
-        slidesPerView: 4,
-        loop: !0,
-        clickable: !0,
-        spaceBetween: 30,
-        breakpoints: { 992: { slidesPerView: 4 }, 768: { slidesPerView: 3, spaceBetween: 30 }, 480: { slidesPerView: 2, spaceBetween: 20 }, 0: { slidesPerView: 1 } },
-        navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-    }),
-    swiper = new Swiper(".product__swiper--column4__style2", {
-        slidesPerView: 4,
-        loop: !0,
-        clickable: !0,
-        spaceBetween: 30,
-        breakpoints: { 1366: { slidesPerView: 4 }, 1200: { slidesPerView: 3 }, 992: { slidesPerView: 2 }, 768: { slidesPerView: 3, spaceBetween: 30 }, 480: { slidesPerView: 2, spaceBetween: 20 }, 0: { slidesPerView: 1 } },
-        navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-    }),
-    swiper = new Swiper(".single__product--nav", {
-        loop: !0,
-        spaceBetween: 20,
-        slidesPerView: 5,
-        freeMode: !0,
-        watchSlidesProgress: !0,
-        breakpoints: { 992: { spaceBetween: 20 }, 768: { slidesPerView: 5, spaceBetween: 15 }, 480: { slidesPerView: 4 }, 320: { slidesPerView: 3 }, 200: { slidesPerView: 2 }, 0: { slidesPerView: 1 } },
-        navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-    }),
-    swiper2 = new Swiper(".single__product--preview", { loop: !0, spaceBetween: 10, thumbs: { swiper: swiper } }),
-    swiper = new Swiper(".product__swiper--column1", {
-        slidesPerView: 4,
-        loop: !1,
-        clickable: !0,
-        spaceBetween: 15,
-        direction: "vertical",
-        navigation: { nextEl: ".small__product .swiper-button-next", prevEl: ".small__product .swiper-button-prev" },
-    }),
-    swiper = new Swiper(".blog__swiper--activation", {
-        slidesPerView: 3,
-        loop: !0,
-        clickable: !0,
-        spaceBetween: 30,
-        breakpoints: { 992: { slidesPerView: 3 }, 768: { slidesPerView: 2, spaceBetween: 30 }, 560: { slidesPerView: 2, spaceBetween: 20 }, 0: { slidesPerView: 1 } },
-        navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-    }),
-    swiper = new Swiper(".testimonial__swiper--activation", {
-        slidesPerView: 2,
-        loop: !0,
-        clickable: !0,
-        spaceBetween: 30,
-        breakpoints: { 576: { slidesPerView: 2, spaceBetween: 20 }, 0: { slidesPerView: 1 } },
-        navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-    }),
-    swiper = new Swiper(".quickview__swiper--activation", {
-        slidesPerView: 1,
-        loop: !0,
-        clickable: !0,
-        spaceBetween: 30,
-        navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-        pagination: { el: ".swiper-pagination", clickable: !0 },
-    }),
-    swiper = new Swiper(".product__media--nav", {
-        loop: !0,
-        spaceBetween: 10,
-        slidesPerView: 4,
-        freeMode: !0,
-        watchSlidesProgress: !0,
-        breakpoints: { 480: { slidesPerView: 4 }, 200: { slidesPerView: 3 }, 0: { slidesPerView: 1 } },
-        navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-    }),
-    swiper2 = new Swiper(".product__media--preview", { loop: !0, spaceBetween: 10, thumbs: { swiper: swiper } }),
-    swiper3 = new Swiper(".testimonial__active--one", {
-        loop: !0,
-        spaceBetween: 20,
-        slidesPerView: 5,
-        centeredSlides: !0,
-        freeMode: !0,
-        watchSlidesProgress: !0,
-        breakpoints: { 768: { slidesPerView: 5 }, 576: { slidesPerView: 3 }, 200: { slidesPerView: 3 }, 0: { slidesPerView: 1 } },
-        navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-    }),
-    swiper2 = new Swiper(".testimonial__active--two", { loop: !0, spaceBetween: 10, thumbs: { swiper: swiper3 } });
+
 const tab = function (wrapper) {
     let tabContainer = document.querySelector(wrapper);
     tabContainer &&
@@ -237,10 +146,6 @@ function offcanvsSidebar(openTrigger, closeTrigger, wrapper) {
         (WrapperSidebar.classList.remove("active"), document.querySelector("body").classList.remove(`${wrapperOverlay}_active`), document.body.removeEventListener("click", handleBodyClass.bind(this)));
     });
 }
-activeClassAction(".offcanvas__account--currency__menu", ".offcanvas__account--currency__submenu"),
-    activeClassAction(".account__currency--link", ".dropdown__currency"),
-    activeClassAction(".language__switcher", ".dropdown__language"),
-    activeClassAction(".offcanvas__language--switcher", ".offcanvas__dropdown--language"),
     offcanvsSidebar(".minicart__open--btn", ".minicart__close--btn", ".offCanvas__minicart"),
     offcanvsSidebar(".search__open--btn", ".predictive__search--close__btn", ".predictive__search--box"),
     offcanvsSidebar(".widget__filter--btn", ".offcanvas__filter--close", ".offcanvas__filter--sidebar");
