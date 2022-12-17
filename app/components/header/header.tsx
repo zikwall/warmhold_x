@@ -120,9 +120,7 @@ function MegaMenuBanner({ imageUrl, actionUrl, children }: MegaMenuBannerProps) 
                 src={imageUrl}
                 alt="banner-menu"
             />
-            <div className="banner__content">
-                {children}
-            </div>
+            {children}
         </a>
     );
 }
